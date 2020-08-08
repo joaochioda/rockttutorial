@@ -5,15 +5,24 @@ import './styles.css';
 interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement>{
   label: string;
   name: string;
+  options: Array<{
+    value: string;
+    label: string;
+  }>;
 
 }
 
 
-const Select: React.FC<SelectProps> = ({ label, name, ...rest }) => {
+const Select: React.FC<SelectProps> = ({ label, name, options , ...rest }) => {
   return (
     <div className="select-block">
       <label htmlFor={name}>{label}</label>
-      <select id={name} {...rest}/>
+      <select value="" id={name} {...rest}>
+        <option value="" disabled hidden>Selecione uma opção</option>
+        {options.map((opt, idx) => {
+          return <option key={idx} value={opt.value}>{opt.label}</option>
+        })}
+      </select>
     </div>
   );
 }
