@@ -1,12 +1,24 @@
 import React from 'react';
 import { View, Image, Text, TouchableOpacity } from 'react-native';
-
+import { useNavigation } from '@react-navigation/native';
 import LandingImage from '../../assets/images/landing.png';
 import StudyIcon from '../../assets/images/icons/study.png'
 import GiveClasses from '../../assets/images/icons/give-classes.png'
 import HeartIcon from '../../assets/images/icons/heart.png'
+import { } from 'react-native-gesture-handler'
+
 import styles from './styles';
 function Landing() {
+    const navigation = useNavigation();
+
+    function handleNavigationToGiveClassesPage() {
+        navigation.navigate('GiveClasses');
+    }
+
+    function handleNavigationToStudyPage() {
+        navigation.navigate('Study');
+    }
+
     return (
         <View style={styles.container}>
             <Image source={LandingImage} style={styles.banner}/>
@@ -17,12 +29,12 @@ function Landing() {
                 </Text>
             </Text>
             <View style={styles.buttonsContainer}>
-                <TouchableOpacity style={[styles.button, styles.buttonPrimary]}>
+                <TouchableOpacity style={[styles.button, styles.buttonPrimary]} onPress={handleNavigationToStudyPage}>
                     <Image source={StudyIcon}/>
                     <Text style={styles.buttonText}>Estudar</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={[styles.button, styles.buttonSecondary]}>
+                <TouchableOpacity onPress={handleNavigationToGiveClassesPage} style={[styles.button, styles.buttonSecondary]}>
                     <Image source={GiveClasses}/>
                     <Text style={styles.buttonText}>Dar aulas</Text>
                 </TouchableOpacity>
