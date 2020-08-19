@@ -1,4 +1,4 @@
-import React, { useState, FormEvent } from 'react';
+import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import PageHeader from '../../components/PageHeader';
 import Input from '../../components/Input';
@@ -28,7 +28,7 @@ function TeacherForm() {
     setScheduleItems([...scheduledItems, { week_day: '', from: '', to: '' }])
   }
 
-  function handleCreateClass(e: FormEvent) {
+  function handleCreateClass(e) {
     e.preventDefault();
 
     api.post('classes', {
@@ -42,7 +42,7 @@ function TeacherForm() {
     });
   }
 
-  function setScheduleItemValue(index: number, field: string, value: string) {
+  function setScheduleItemValue(index, field, value) {
     const newArray = scheduledItems.map((scheduledItem, idx) => {
       if (idx === index) {
         return { ...scheduledItem, [field]: value };
@@ -66,7 +66,7 @@ function TeacherForm() {
             <Input name="name" label="Nome completo" value={name} onChange={e => setName(e.target.value)} />
             <Input name="avatar" label="Avatar" value={avatar} onChange={e => setAvatar(e.target.value)} />
             <Input name="whatsapp" label="WhatsApp" value={whatsapp} onChange={e => setWhatsapp(e.target.value)} />
-            <Textarea name="bio" label="Biografia" value={bio} onChange={e => setBio(e.target.value)} />
+            <Textarea name="bio" label="Biografia" value={bio} onChange={e => setBio(e)} />
           </fieldset>
 
           <fieldset>
