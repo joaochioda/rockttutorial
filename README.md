@@ -4,13 +4,13 @@
   <img alt="Made By" src="https://img.shields.io/static/v1?label=Made%20By&message=Joao%20Guilherme&color=purple&style=for-the-badge">
 	</a>
   
-  <img alt="Languages" src="https://img.shields.io/github/languages/count/rafaelmartins92/corebiz?style=for-the-badge">
+  <img alt="Languages" src="https://img.shields.io/github/languages/count/joaochioda/rockttutorial?style=for-the-badge">
   
-  <img alt="Top Language" src="https://img.shields.io/github/languages/top/rafaelmartins92/corebiz?style=for-the-badge">
+  <img alt="Top Language" src="https://img.shields.io/github/languages/top/joaochioda/rockttutorial?style=for-the-badge">
   
-  <img alt="Repo Size" src="https://img.shields.io/github/repo-size/rafaelmartins92/corebiz?style=for-the-badge">
+  <img alt="Repo Size" src="https://img.shields.io/github/repo-size/joaochioda/rockttutorial?style=for-the-badge">
   
-  <img alt="Last Commit" src="https://img.shields.io/github/last-commit/rafaelmartins92/corebiz?style=for-the-badge">
+  <img alt="Last Commit" src="https://img.shields.io/github/last-commit/joaochioda/rockttutorial?style=for-the-badge">
 </p>
 
 <h4 align="center">
